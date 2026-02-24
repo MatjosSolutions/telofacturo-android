@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Telofacturo</string>
+    <string name="title_activity_main">Telofacturo</string>
+    <string name="package_name">com.telofacturo.app</string>
+    <string name="custom_url_scheme">com.telofacturo.app</string>
+</resources>

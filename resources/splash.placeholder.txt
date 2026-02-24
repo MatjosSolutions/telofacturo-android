@@ -1,0 +1,5 @@
+PLACEHOLDER SPLASH
+
+Reemplaza este archivo por el asset final antes de publicar.
+Nombre esperado al generar assets con Capacitor: resources/splash.png
+Sugerencia: 2732x2732 px.

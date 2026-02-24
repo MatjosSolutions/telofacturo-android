@@ -1,0 +1,5 @@
+PLACEHOLDER ICON
+
+Reemplaza este archivo por el asset final antes de publicar.
+Nombre esperado al generar assets con Capacitor: resources/icon.png
+Sugerencia: 1024x1024 px.
