@@ -3,9 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Telofacturo</title>
+    <title>Inventario Mock | Telofacturo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <p>Telofacturo Android Wrapper</p>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="app-shell">
+      <header class="hero card">
+        <div>
+          <p class="eyebrow">WebApp Responsive · CRUD Mockeado</p>
+          <h1>Panel de inventario moderno</h1>
+          <p class="subtitle">Administra productos sin backend ni base de datos.</p>
+        </div>
+        <span class="badge">Frontend only</span>
+      </header>
+
+      <section class="stats-grid">
+        <article class="card stat">
+          <p>Total productos</p>
+          <strong id="stat-total">0</strong>
+        </article>
+        <article class="card stat">
+          <p>Valor inventario</p>
+          <strong id="stat-value">€0.00</strong>
+        </article>
+      </section>
+
+      <section class="layout-grid">
+        <article class="card">
+          <h2 id="form-title">Crear producto</h2>
+          <form id="product-form" class="form-grid">
+            <input type="hidden" id="product-id" />
+
+            <label>
+              Nombre
+              <input id="name" type="text" placeholder="Ej: Auriculares Pro" required />
+            </label>
+
+            <label>
+              Categoría
+              <input id="category" type="text" placeholder="Ej: Audio" required />
+            </label>
+
+            <label>
+              Precio
+              <input id="price" type="number" min="0" step="0.01" placeholder="0.00" required />
+            </label>
+
+            <div class="actions">
+              <button type="submit" class="btn primary" id="save-btn">Guardar</button>
+              <button type="button" class="btn ghost" id="cancel-btn" hidden>Cancelar</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="card">
+          <div class="table-header">
+            <h2>Productos</h2>
+            <span id="count" class="count-pill">0 items</span>
+          </div>
+
+          <label class="search-wrap" for="search">
+            Buscar
+            <input id="search" type="search" placeholder="Buscar por nombre o categoría..." />
+          </label>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Categoría</th>
+                  <th>Precio</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="product-table-body"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <template id="empty-state-template">
+      <tr>
+        <td colspan="4" class="empty-state">No hay productos para mostrar.</td>
+      </tr>
+    </template>
+
+    <script src="app.js"></script>
   </body>
 </html>
